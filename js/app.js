@@ -62,40 +62,9 @@ let time = null;
 let currentTrack = 0;
 let currentTrackModal = 0;
 let musicArray = [
+
   {
     id: 1,
-    title: "Barcod",
-    author: "Yas",
-    coverImg: "../assets/images/c-yas.jpg",
-    trak: "../assets/music/yas.mp3",
-    genre: "rap",
-  },
-  {
-    id: 2,
-    title: "NDA",
-    author: "Billie Eilish",
-    coverImg: "../assets/images/c-bili.png",
-    trak: "../assets/music/Billie Eilish - NDA.mp3",
-    genre: "hiphop",
-  },
-  {
-    id: 3,
-    title: "Avaz Nemishi",
-    author: "Shadmehr",
-    coverImg: "../assets/images/c-shadmehr.jpg",
-    trak: "../assets/music/Shadmehr Aghili - Avaz Nemishi.mp3",
-    genre: "pop",
-  },
-  {
-    id: 4,
-    title: "POWER",
-    author: "Kanya",
-    coverImg: "../assets/images/c-kanya.jpg",
-    trak: "../assets/music/02 POWER.mp3",
-    genre: "hiphop",
-  },
-  {
-    id: 5,
     title: "Butterfly Effect",
     author: "Travis Scott",
     coverImg: "../assets/images/travis.jpg",
