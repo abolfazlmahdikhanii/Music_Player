@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/app.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+      <div id="backdrop"></div>
+    <div class="container">
+      <section class="left menu">
+        <div class="logo">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather feather-activity"
+          >
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+          </svg>
+          <span>Music</span>
+        </div>
+
+        <div class="list-menu">
+          <p class="title-menu">menu</p>
+          <ul class="list">
+            <li class="item-menu">
+              <div class="sub-item-menu">
+                <span class="icon-item-menu"
+                  ><i class="fas fa-headphones"></i
+                ></span>
+                <span class="text-item-menu">Explorer</span>
+              </div>
+            </li>
+            <li class="item-menu">
+              <div class="sub-item-menu">
+                <span class="icon-item-menu"
+                  ><i class="fas fa-volume-up"></i
+                ></span>
+                <span class="text-item-menu">Genres</span>
+              </div>
+            </li>
+            <li class="item-menu">
+              <div class="sub-item-menu">
+                <span class="icon-item-menu"
+                  ><i class="fas fa-compact-disc"></i
+                ></span>
+                <span class="text-item-menu">Albums</span>
+              </div>
+            </li>
+            <li class="item-menu">
+              <div class="sub-item-menu">
+                <span class="icon-item-menu"
+                  ><i class="fas fa-microphone"></i
+                ></span>
+                <span class="text-item-menu">Artists</span>
+              </div>
+            </li>
+            <li class="item-menu">
+              <div class="sub-item-menu">
+                <span class="icon-item-menu"
+                  ><i class="fas fa-podcast"></i
+                ></span>
+                <span class="text-item-menu">Podcasts</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="list-menu">
+          <p class="title-menu">library</p>
+          <ul class="list">
+            <li class="item-menu">
+              <div class="sub-item-menu">
+                <span class="icon-item-menu"
+                  ><i class="fas fa-history"></i
+                ></span>
+                <span class="text-item-menu">Recent</span>
+              </div>
+            </li>
+            <li class="item-menu">
+              <div class="sub-item-menu">
+                <span class="icon-item-menu"><i class="fas fa-drum"></i></span>
+                <span class="text-item-menu">Albums</span>
+              </div>
+            </li>
+            <li class="item-menu">
+              <div class="sub-item-menu">
+                <span class="icon-item-menu"><i class="fas fa-heart"></i></span>
+                <span class="text-item-menu">Favourites</span>
+              </div>
+            </li>
+            <li class="item-menu">
+              <div class="sub-item-menu">
+                <span class="icon-item-menu"
+                  ><i class="fas fa-folder"></i
+                ></span>
+                <span class="text-item-menu">Local</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="list-menu">
+          <p class="title-menu">playlist</p>
+          <ul class="list">
+            <li class="item-menu" id="new-music">
+              <div class="sub-item-menu">
+                <span class="icon-item-menu"
+                  ><i class="fas fa-plus-square"></i
+                ></span>
+                <span class="text-item-menu">Import New Music</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="box-ad">
+          <section class="main-box">
+            <div class="left-box">
+              <img src="assets/images/homepad.jpg" alt="ad" />
+            </div>
+            <div class="right-box">Google Homepod</div>
+          </section>
+          <div class="footer-box">
+            <span><i class="fab fa-spotify"></i></span>
+            <span class="t-box">Playing On Device</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="right">
+        <img class="preloader" src="assets/images/Bar-Preloader.gif" alt="loading">
+         <div class="sub-right">
+          <div class="header">
+            <div class="menu-header">
+              <div class="left-menu-header">
+                <div class="item-menu-header">
+                  <a href="#">music</a>
+                  <a href="#">podcast</a>
+                  <a href="#">live</a>
+                </div>
+
+                <div class="search-part">
+                  <div class="search-menu-header">
+                    <span>
+                      <i class="fas fa-search"></i>
+                    </span>
+                    <input
+                      class="search"
+                      type="text"
+                      placeholder="Type here to search"
+                    />
+                  </div>
+                  <div class="suggest-search">
+                    <div class="search-show">
+                      <i class="fas fa-search"></i>
+                      <p>Nothing to show</p>
+                    </div>
+                    <ul class="list-search">
+                     
+                      
+                      
+                      
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="right-menu-header">
+                <div class="notification">
+                  <span class="bell"><i class="fas fa-bell"></i></span>
+                  <span class="dot"><i class="fas fa-circle"></i></span>
+                </div>
+                <div class="profile-box">
+                  <img src="assets/images/profile.png" alt="" />
+                  <p>Dave Coper</p>
+                </div>
+              </div>
+            </div>
+            <div class="banner-title">
+              <div class="txt1">Trending New Hits</div>
+              <div class="txt2">In My Feelings</div>
+              <div class="txt3">
+                <span>Camila Cabello</span>
+                <span class="playes">63Million Plays</span>
+              </div>
+              <div class="btn-banner">
+                <button>Listen Now</button>
+                <div class="fav">
+                  <i class="fas fa-heart"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="main">
+            <div class="left-main">
+              <div class="top-artist">
+                <div class="header-top">
+                  <p class="title">Top Artists</p>
+                  <p class="see-all">See all</p>
+                </div>
+                <div class="main-top-artist">
+              
+                </div>
+  
+                <div class="btn-scroll">
+                  <button class="f-scroll"><i class="fas fa-chevron-right"></i></button>
+                  <button class="b-scroll"><i class="fas fa-chevron-left"></i></button>
+                </div>
+              </div>
+              <div class="row-top">
+                <div class="gener">
+                  <div class="header-top">
+                    <p class="title">Genres</p>
+                    <p class="see-all">See all</p>
+                  </div>
+                  <div class="main-gener">
+                    <div class="item-gener1 item-gener"  data-value="dance">Dance Beat</div>
+                    <div class="item-gener2 item-gener" data-value="pop">Pop</div>
+                    <div class="item-gener3 item-gener" data-value="india">India</div>
+                    <div class="item-gener4 item-gener" data-value="hiphop">Hip Hop</div>
+                    <div class="item-gener5 item-gener" data-value="rap">Rap</div>
+                    <div class="item-gener6 item-gener" data-value="romance">Romance</div>
+                  </div>
+                </div>
+                <div class="top-chart">
+                  <div class="header-top">
+                    <p class="title">Top Charts</p>
+                    <p class="see-all">See all</p>
+                  </div>
+                  <div class="main-chart">
+                    <ul class="list-chart"></ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="player">
+              <div class="header-top pl-header">
+                <p class="title">Player</p>
+  
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  enable-background="new 0 0 24 24"
+                  height="17px"
+                  viewBox="0 0 24 24"
+                  width="17px"
+                  fill="#fff"
+                >
+                  <g><rect fill="none" height="24" width="24" /></g>
+                  <g>
+                    <path
+                      d="M15,6H3v2h12V6z M15,10H3v2h12V10z M3,16h8v-2H3V16z M17,6v8.18C16.69,14.07,16.35,14,16,14c-1.66,0-3,1.34-3,3s1.34,3,3,3 s3-1.34,3-3V8h3V6H17z"
+                    />
+                  </g>
+                </svg>
+              </div>
+  
+              <div class="loading"></div>
+              <section class="top">
+                <div class="info">
+                  <img
+                    class="pl-cover"
+                    src="assets/images/travis.jpg"
+                    alt="cover"
+                  />
+                  <p class="music-name">Butterfly Effect</p>
+                  <p class="singer">Travis Scott</p>
+                  <p class="date">Eliont 2020</p>
+                </div>
+                <div class="range">
+                  <!-- audio -->
+                  <audio id="music" src="assets/music/yas.mp3"></audio>
+                  <div class="durate">
+                    <span class="dure">0:00</span>
+                  </div>
+                  <input class="rng" type="range" min="0" max="" value="0" />
+                  <div class="curr-time">
+                    <span class="curr">0:00</span>
+                  </div>
+                </div>
+              </section>
+              <div class="btn-container">
+                <svg
+                  class="backward"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="25px"
+                  viewBox="0 0 24 24"
+                  width="25px"
+                  fill="#fff"
+                >
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z" />
+                </svg>
+                <button class="play-music play" data-id="1"></button>
+  
+                <svg
+                  class="forward"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="25px"
+                  viewBox="0 0 24 24"
+                  width="25px"
+                  fill="#fff"
+                >
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z" />
+                </svg>
+              </div>
+            </div>
+          </div>
+         </div>
+      </section>
+    </div>
+
+
+    <!-- modal-box -->
+      <div class="modal-box">
+          <div class="header-modal">
+              <p class="title-modal">Import new Music</p>
+              <svg class="ico" xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 24 24" fill="#e72424" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-circle"><circle stroke="#e72424"  cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+          </div>
+          <div class="main-modal">
+              <div class="row-input">
+                <div class="input-control">
+             
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    <input type="text" id="singer-input" class="input" placeholder="Enter Singer Name">
+                  </div>
+                  <div class="input-control">
+             
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-music"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+                    <input type="text" id="music-input" class="input" placeholder="Enter Music Name">
+                  </div>
+              </div>
+              <div class="row-input">
+                <div class="input-control">
+             
+                 
+                    <input type="text" id="dir" class="input" placeholder="Enter Music Directory" readonly>
+                    <label class="btn-browse" for="file-directory">
+                        <span >Browse</span>
+                        <input type="file" id="file-directory" accept="audio/mp3,audio/wav">
+                    </label>
+                  </div>
+                  <div class="input-control">
+                     <select id="select-gener">
+                         <option value="">- Select Music Gener -</option>
+                         <option value="rap">Rap</option>
+                         <option value="pop">Pop</option>
+                         <option value="india">India</option>
+                         <option value="hiphop">Hip Hop</option>
+                         <option value="romance">Romance</option>
+                         <option value="classic">Classic</option>
+                     </select>
+                  </div>
+              </div>
+              <div class="row-input">
+                <div class="input-control upload">
+             
+                  <img class="output-img" src="" alt="cover">
+                    
+                    <label class="btn-upload" for="file">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-upload-cloud"><polyline points="16 16 12 12 8 16"></polyline><line x1="12" y1="12" x2="12" y2="21"></line><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"></path><polyline points="16 16 12 12 8 16"></polyline></svg>
+                        <span >Upload Music Cover</span>
+                        <input type="file" id="file" accept="image/png, image/jpeg ,image/jpg">
+                    </label>
+                  </div>
+                 
+              </div>
+              <div class="row-button">
+                  <button class="import">Import Your Music</button>
+                 
+              </div>
+          </div>
+      </div>
+    
+      <!-- modal box player -->
+
+      <div class="modal-box-pl">
+        
+        <div class="header-modal-pl">
+          <div class="close">
+            <i class="fas fa-arrow-left"></i>
+          </div>
+          
+          <div class="prof">
+          </div>
+          <p class="b-author">Bili Elish</p>
+        </div>
+        <div class="main-modal-pl">
+         <div class="txt-empty-modal">
+          <p >Nothing to show here.Try a diffrent filter</p>
+         </div>
+          <ul class="list-modal-pl">
+        
+          
+          </ul>
+
+
+          <div class="footer-modal">
+            <div class="item-footer">
+              <img class="img-footer" src="assets/images/empty.png" alt="">
+
+              <div class="col">
+                <p class="s-title">Unknown</p>
+                <p class="s-singer">Unknown</p>
+              </div>
+            </div>
+          
+            
+            <!-- duration -->
+            <section class="player-modal-dur">
+              <div class="row-btn">
+                <div class="btn-previous-dur btn"><i class="fas fa-step-backward"></i>
+                </div>
+                <button class="btn-play-dur play"></i>
+                </button>
+                <div class="btn-next-dur btn"><i class="fas fa-step-forward"></i>
+                </div>
+                
+              </div>
+               <audio id="modal-music" src="assets/music/02 POWER.mp3" min></audio>
+              <div class="time-pl-dur">
+                <span class="duration">0:00</span>
+                <input type="range" class="rng rng-dur">
+                <span class="current">0:00</span>
+              </div>
+            </section>
+
+            <div class="sound">
+             
+              <div class="btn-sound up">
+               <div class="r-sound">
+                 <input type="range" class="sound-rng" value="100">
+               </div>
+              </div>
+           </div>
+          </div>
+        </div>
+      </div>
+    <!-- script -->
+    <script src="js/function.js"></script>
+    <script src="https://unpkg.com/uuid@latest/dist/umd/uuidv4.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

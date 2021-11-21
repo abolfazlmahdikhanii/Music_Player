@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;600;700&display=swap');
+
+:root{
+  --banerBackground:#100F15;
+  --menuBackground:#1A191F;
+  --activeTextColor:#555F93;
+  --inactiveTextColor:#767676;
+  --btnColor:#5B73F6;
+  --activeIconColor:#6372D7;
+  --inActiveIconColor:#B2B2C9;
+   --colorPrimary:#fff;
+   --backgroundColor:#1A191F;
+   --bodyColor:#3D3D3B;
+   --boxColor:#32323E
+}
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    line-height: 1.8;
+    list-style: none;
+
+    scroll-behavior: smooth;
+}
+body{
+    font-family: "Poppins","Ubuntu";
+    background-color: var(--bodyColor);
+}
+#backdrop {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+    top: 0;
+    left: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.35) 100%);
+    z-index: 44444;
+    pointer-events: none;
+    display: none;
+    transition: 0.6s;
+ 
+}
+
+#backdrop.show {
+    display: block;
+    pointer-events: all;
+    transition: 0.5s;
+}
