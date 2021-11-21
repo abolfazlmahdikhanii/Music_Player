@@ -11,6 +11,6 @@ features:
 - 6.Increase and decrease music volume
 - 7.show music time
 
-[https://music-player-eight-rho.vercel.app/](Demo)
+[Demo](https://music-player-eight-rho.vercel.app/)
  
 ## Abolfazl Mahdikhani
