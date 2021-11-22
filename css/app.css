@@ -76,7 +76,7 @@
     margin-left: 25px;
     font-weight: 500;
 }
-.container .left .box-ad{
+.container .left .box-a{
 
     background-color:#23232B;
     width: 200px;
@@ -104,7 +104,7 @@
 .footer-box .t-box{
     margin-left: 8px;
 }
-.container .left .box-ad .left-box img{
+.container .left .box-a .left-box img{
     width: 60px;
     height: 60px;
     border-radius: 8px;
